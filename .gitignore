@@ -1,0 +1,7 @@
+bin/
+obj/
+installers/
+.suo
+.vs
+.vscode
+packages/
