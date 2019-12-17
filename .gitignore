@@ -1,6 +1,7 @@
 bin/
 obj/
 installers/
+installer/
 .suo
 .vs
 .vscode
