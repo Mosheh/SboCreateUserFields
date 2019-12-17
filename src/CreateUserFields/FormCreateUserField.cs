@@ -142,6 +142,8 @@ namespace CreateUserFields
             _company.CompanyDB = metroTextBoxCompanyDb.Text;
             if (_company.Connect() != 0)
                 throw new Exception(_company.GetLastErrorDescription());
+
+            
         }
 
         void SaveConnectionParam()
@@ -245,7 +247,7 @@ namespace CreateUserFields
         }
 
         private void metroButtonClose_Click(object sender, EventArgs e)
-        {
+        {            
             this.Close();
         }
 
@@ -273,6 +275,8 @@ namespace CreateUserFields
                     throw new Exception("Empresa não conectado");
                 _company.Disconnect();
                 ConnectOnSAP();
+
+                
 
                 var sapTables = metroGridTables.CurrentRow.DataBoundItem as SAPTables;
                 if (sapTables == null)
@@ -378,6 +382,38 @@ namespace CreateUserFields
             {
                 this.ShowError(ex);
             }
+        }
+    }
+
+    public static  class CompanySAPExtentions
+    {
+        public static void ChangeDatabase(this Company company, string database, string dbpassword, string userpassword)
+        {
+            if (company == null)
+                throw new Exception("Invalid company ");
+
+            if (!company.Connected)
+                throw new Exception(company.GetLastErrorDescription());
+            var server = company.Server;
+            var userDb = company.DbUserName;
+            var userName = company.UserName;
+            var type = company.DbServerType;            
+
+            company.Disconnect();
+
+            company.Server = server;
+            company.DbUserName = userDb;
+            company.DbPassword = dbpassword;
+            company.UserName = userName;
+            company.Password = userpassword;
+            
+            company.DbServerType = type;
+            company.CompanyDB = database;
+
+            company.Connect();
+            if (!company.Connected)
+                Console.WriteLine(company.GetLastErrorDescription());
+
         }
     }
 }

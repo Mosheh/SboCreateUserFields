@@ -1,20 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SboCreateUserFields", "CreateUserFields\SboCreateUserFields.csproj", "{C698400D-337B-44BE-879D-3FE9A1FEE8AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Debug|x64.ActiveCfg = Debug|x64
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Debug|x64.Build.0 = Debug|x64
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Debug|x86.ActiveCfg = Debug|x86
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Debug|x86.Build.0 = Debug|x86
 		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Release|x64.ActiveCfg = Release|x64
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Release|x64.Build.0 = Release|x64
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Release|x86.ActiveCfg = Release|x86
+		{C698400D-337B-44BE-879D-3FE9A1FEE8AD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
