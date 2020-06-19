@@ -1,4 +1,4 @@
-# SboCreateUserFields
+# SBO Create User Fields
 Create user fields in SAP Business One, (Perform in Hana and SQL Server)
 
 Installer Download (x86): https://www.sendspace.com/pro/dl/61issq
