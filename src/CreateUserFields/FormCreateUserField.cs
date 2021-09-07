@@ -428,6 +428,7 @@ namespace CreateUserFields
 
             metroTabPageConnection.Text = LanguageService.Label(LabelEnum.SAPConnection, culture);
             metroTabPageCreateUserField.Text = LanguageService.Label(LabelEnum.ObjectsSelection, culture);
+            metroLabelServerType.Text = LanguageService.Label(LabelEnum.ServerType, culture);
             metroLabelServer.Text = LanguageService.Label(LabelEnum.Server, culture);
             metroLabelUserDb.Text = LanguageService.Label(LabelEnum.DbUser, culture);
             metroLabeUserDbPassword.Text = LanguageService.Label(LabelEnum.DbPassword, culture);
