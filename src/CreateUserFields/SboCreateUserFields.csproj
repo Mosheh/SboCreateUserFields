@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CreateUserFields</RootNamespace>
     <AssemblyName>CreateUserFields</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -95,7 +95,7 @@
     </Reference>
     <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\SAP\SAP Business One SDK\Lib\SAPBusinessOneSDK.dll</HintPath>
+      <HintPath>..\lib\sap10\SAPBusinessOneSDK.dll</HintPath>
     </Reference>
     <Reference Include="SimpleQuery, Version=1.0.5.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleQuery-ORM.1.0.5.1\lib\SimpleQuery.dll</HintPath>
@@ -124,11 +124,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\MessageService.cs" />
+    <Compile Include="Controls\IForm.cs" />
     <Compile Include="Domain\ConnectionParam.cs" />
     <Compile Include="Domain\IConnectionParamRepository.cs" />
     <Compile Include="Domain\IDataConnection.cs" />
     <Compile Include="Domain\ISAPTableRepository.cs" />
+    <Compile Include="Domain\ISettingRepository.cs" />
     <Compile Include="Domain\SAPTables.cs" />
+    <Compile Include="Domain\Setting.cs" />
     <Compile Include="FormCreateUserField.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +147,9 @@
     <Compile Include="Infra\ConnectionParamRepository.cs" />
     <Compile Include="Infra\DataConnection.cs" />
     <Compile Include="Infra\SAPTableRepository.cs" />
+    <Compile Include="Infra\SettingRepository.cs" />
+    <Compile Include="Languages\LabelEnum.cs" />
+    <Compile Include="Languages\LanguageService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCreateUserField.resx">
@@ -152,6 +158,8 @@
     <EmbeddedResource Include="FormNewTable.resx">
       <DependentUpon>FormNewTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Languages\Label.en-us.resx" />
+    <EmbeddedResource Include="Languages\Label.pt-br.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,6 +194,7 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_minus_1645995.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net45\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

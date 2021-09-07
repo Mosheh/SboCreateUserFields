@@ -1,4 +1,7 @@
-﻿using CreateUserFields.Domain;
+﻿using CreateUserFields.Controls;
+using CreateUserFields.Domain;
+using CreateUserFields.Infra;
+using CreateUserFields.Languages;
 using MetroFramework;
 using MetroFramework.Forms;
 using SAPbobsCOM;
@@ -7,6 +10,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,14 +18,15 @@ using System.Windows.Forms;
 
 namespace CreateUserFields
 {
-    public partial class FormNewTable : MetroForm
+    public partial class FormNewTable : MetroForm, IForm
     {
         private Company _company;
         private ISAPTableRepository _tableRepository;
-
+        private Setting _setting;
         public FormNewTable(Company company, ISAPTableRepository tableRepository)
         {
             InitializeComponent();
+            _setting = new Infra.SettingRepository(DataConnection.Instance).GetSetting();
 
             if (company == null)
                 throw new Exception("Conexão SAP inválida");
@@ -88,6 +93,24 @@ namespace CreateUserFields
         private void metroTextBoxTableName_Leave(object sender, EventArgs e)
         {
             metroTextBoxTableName.Text = metroTextBoxTableName.Text.ToUpper();
+        }
+
+        public void SetText()
+        {
+            var culture = GetCulture();
+            this.Text = LanguageService.Label(LabelEnum.NewTable, culture);
+            metroLabelTableName.Text = LanguageService.Label(LabelEnum.TableName, culture);
+            metroLabelDescription.Text = LanguageService.Label(LabelEnum.Description, culture);
+            metroButtonCancel.Text = LanguageService.Label(LabelEnum.Cancel, culture);
+        }
+
+        private CultureInfo GetCulture()
+        {
+            if (string.IsNullOrEmpty(_setting.Language) ||
+                _setting.Language.Equals("English"))
+                return new CultureInfo("en-US");
+            else
+                return new CultureInfo("pt-BR");
         }
     }
 }

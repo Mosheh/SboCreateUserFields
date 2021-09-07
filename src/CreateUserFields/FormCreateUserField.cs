@@ -1,37 +1,33 @@
 ﻿using CreateUserFields.Common;
+using CreateUserFields.Controls;
 using CreateUserFields.Domain;
 using CreateUserFields.Infra;
+using CreateUserFields.Languages;
 using MetroFramework;
-using MetroFramework.Controls;
 using SAPbobsCOM;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace CreateUserFields
 {
-    public partial class FormCreateUserFields : MetroFramework.Forms.MetroForm
+    public partial class FormCreateUserFields : MetroFramework.Forms.MetroForm, IForm
     {
         Company _company = new Company();
         ISAPTableRepository _tableRepository;
         IConnectionParamRepository _connectionParamRepository;
+        SettingRepository _settingRepository;
         private ConnectionParam _connectinoParam;
         private BoDataServerTypes _selectedServerType;
+        private Setting _setting;
 
         public FormCreateUserFields()
         {
             InitializeComponent();
             metroGridTables.AutoGenerateColumns = false;
             metroTabControl1.SelectedIndex = 0;
-
+            
             FillServerTypes();
             FormatFiedType();
             FormatFieldSubType();
@@ -39,10 +35,43 @@ namespace CreateUserFields
 
             _tableRepository = new Infra.SAPTableRepository(DataConnection.Instance);
             _connectionParamRepository = new Infra.ConnectionParamRepository(DataConnection.Instance);
-
+            _settingRepository = new SettingRepository(DataConnection.Instance);
             _connectinoParam = _connectionParamRepository.GetConnectionParam();
             if (_connectinoParam == null) _connectinoParam = new ConnectionParam();
+            metroComboBoxLanguage.SelectedValueChanged += MetroComboBoxLanguage_SelectedValueChanged;
+            SetSetting();
             FillControls();
+        }
+
+        private void SetSetting()
+        {
+            try
+            {
+                _setting = _settingRepository.GetSetting();
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
+        }
+
+        private void MetroComboBoxLanguage_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (metroComboBoxLanguage.Text != _setting.Language)
+                {
+                    _setting.Language = metroComboBoxLanguage.Text;
+
+                    _settingRepository.Save(_setting);
+                }
+                SetText();
+            }
+            catch (Exception ex)
+            {
+                MessageService.ShowError(this, ex);
+            }
         }
 
         private void FormatFieldSubType()
@@ -92,17 +121,25 @@ namespace CreateUserFields
 
         private void FillControls()
         {
-            if (_connectinoParam == null)
-                return;
+            try
+            {
+                if (_connectinoParam == null)
+                    return;
 
-            if (_connectinoParam.ServerType > 0)
-                metroComboBoxServerType.SelectedItem = (BoDataServerTypes)_connectinoParam.ServerType;
-            metroTextBoxServer.Text = _connectinoParam.Server;
-            metroTextBoxUser.Text = _connectinoParam.DbUser;
-            metroTextBoxPassword.Text = _connectinoParam.DbPassword;
-            metroTextBoxCompanyDb.Text = _connectinoParam.CompanyDb;
-            metroTextBoxSAPUser.Text = _connectinoParam.SAPUser;
-            metroTextBoxSAPPassword.Text = _connectinoParam.SAPPassword;
+                if (_connectinoParam.ServerType > 0)
+                    metroComboBoxServerType.SelectedItem = (BoDataServerTypes)_connectinoParam.ServerType;
+                metroTextBoxServer.Text = _connectinoParam.Server;
+                metroTextBoxUser.Text = _connectinoParam.DbUser;
+                metroTextBoxPassword.Text = _connectinoParam.DbPassword;
+                metroTextBoxCompanyDb.Text = _connectinoParam.CompanyDb;
+                metroTextBoxSAPUser.Text = _connectinoParam.SAPUser;
+                metroTextBoxSAPPassword.Text = _connectinoParam.SAPPassword;
+                metroComboBoxLanguage.SelectedIndex = _setting.Language == "English" ? 0 : 1;
+            }
+            catch (Exception ex)
+            {
+                MessageService.ShowError(this,ex);
+            }
         }
 
         private void FillEntity()
@@ -382,6 +419,41 @@ namespace CreateUserFields
             {
                 this.ShowError(ex);
             }
+        }
+
+        public void SetText()
+        {
+            var culture = GetCulture();
+            this.Text = LanguageService.Label(LabelEnum.Title, culture);
+
+            metroTabPageConnection.Text = LanguageService.Label(LabelEnum.SAPConnection, culture);
+            metroTabPageCreateUserField.Text = LanguageService.Label(LabelEnum.ObjectsSelection, culture);
+            metroLabelServer.Text = LanguageService.Label(LabelEnum.Server, culture);
+            metroLabelUserDb.Text = LanguageService.Label(LabelEnum.DbUser, culture);
+            metroLabeUserDbPassword.Text = LanguageService.Label(LabelEnum.DbPassword, culture);
+            metroLabelDatabase.Text = LanguageService.Label(LabelEnum.Database, culture);
+            metroLabelUserSAP.Text = LanguageService.Label(LabelEnum.SAPUser, culture);
+            metroLabelSAPPassword.Text = LanguageService.Label(LabelEnum.SAPPassword, culture);
+            metroButtonConnect.Text = LanguageService.Label(LabelEnum.Connect, culture);
+            ColumnName.HeaderText = LanguageService.Label(LabelEnum.Name, culture);
+            ColumnDescrip.HeaderText = LanguageService.Label(LabelEnum.Description, culture);
+
+            metroLabelFieldName.Text = LanguageService.Label(LabelEnum.FieldName, culture);
+            metroLabelFieldDescription.Text = LanguageService.Label(LabelEnum.DescriptionField, culture);
+            metroLabelType.Text = LanguageService.Label(LabelEnum.Type, culture);
+            metroLabelFieldSubType.Text = LanguageService.Label(LabelEnum.SubType, culture);
+            metroLabelSize.Text = LanguageService.Label(LabelEnum.Length, culture);
+            metroButtonCreateUserField.Text = LanguageService.Label(LabelEnum.Create, culture);
+            this.Refresh();
+        }
+
+        private CultureInfo GetCulture()
+        {
+            if (string.IsNullOrEmpty(metroComboBoxLanguage.Text) ||
+                metroComboBoxLanguage.Text.Equals("English"))
+                return new CultureInfo("en-US");
+            else
+                return new CultureInfo("pt-BR");
         }
     }
 

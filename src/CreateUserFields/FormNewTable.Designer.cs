@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.metroTextBoxTableDescription = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelDescription = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxTableName = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelTableName = new MetroFramework.Controls.MetroLabel();
             this.metroButtonClose = new MetroFramework.Controls.MetroButton();
             this.metroButtonCancel = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
@@ -69,15 +69,15 @@
             this.metroTextBoxTableDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxTableDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel11
+            // metroLabelDescription
             // 
-            this.metroLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(23, 107);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(130, 19);
-            this.metroLabel11.TabIndex = 13;
-            this.metroLabel11.Text = "Descrição do campo";
+            this.metroLabelDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabelDescription.AutoSize = true;
+            this.metroLabelDescription.Location = new System.Drawing.Point(23, 107);
+            this.metroLabelDescription.Name = "metroLabelDescription";
+            this.metroLabelDescription.Size = new System.Drawing.Size(65, 19);
+            this.metroLabelDescription.TabIndex = 13;
+            this.metroLabelDescription.Text = "Descrição";
             // 
             // metroTextBoxTableName
             // 
@@ -113,15 +113,15 @@
             this.metroTextBoxTableName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.metroTextBoxTableName.Leave += new System.EventHandler(this.metroTextBoxTableName_Leave);
             // 
-            // metroLabel9
+            // metroLabelTableName
             // 
-            this.metroLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(23, 78);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(134, 19);
-            this.metroLabel9.TabIndex = 12;
-            this.metroLabel9.Text = "Nome para o campo";
+            this.metroLabelTableName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabelTableName.AutoSize = true;
+            this.metroLabelTableName.Location = new System.Drawing.Point(23, 78);
+            this.metroLabelTableName.Name = "metroLabelTableName";
+            this.metroLabelTableName.Size = new System.Drawing.Size(105, 19);
+            this.metroLabelTableName.TabIndex = 12;
+            this.metroLabelTableName.Text = "Nome da tabela";
             // 
             // metroButtonClose
             // 
@@ -153,9 +153,9 @@
             this.Controls.Add(this.metroButtonCancel);
             this.Controls.Add(this.metroButtonClose);
             this.Controls.Add(this.metroTextBoxTableDescription);
-            this.Controls.Add(this.metroLabel11);
+            this.Controls.Add(this.metroLabelDescription);
             this.Controls.Add(this.metroTextBoxTableName);
-            this.Controls.Add(this.metroLabel9);
+            this.Controls.Add(this.metroLabelTableName);
             this.Name = "FormNewTable";
             this.Text = "Nova tabela SAP";
             this.ResumeLayout(false);
@@ -166,9 +166,9 @@
         #endregion
 
         private MetroFramework.Controls.MetroTextBox metroTextBoxTableDescription;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel metroLabelDescription;
         private MetroFramework.Controls.MetroTextBox metroTextBoxTableName;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabelTableName;
         private MetroFramework.Controls.MetroButton metroButtonClose;
         private MetroFramework.Controls.MetroButton metroButtonCancel;
     }

@@ -33,46 +33,47 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateUserFields));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageConnection = new MetroFramework.Controls.MetroTabPage();
             this.metroLinkWaiting = new MetroFramework.Controls.MetroLink();
             this.metroTextBoxSAPPassword = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelSAPPassword = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxSAPUser = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelUserSAP = new MetroFramework.Controls.MetroLabel();
             this.metroButtonConnect = new MetroFramework.Controls.MetroButton();
             this.metroTextBoxCompanyDb = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelDatabase = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxPassword = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabeUserDbPassword = new MetroFramework.Controls.MetroLabel();
             this.metroComboBoxServerType = new MetroFramework.Controls.MetroComboBox();
             this.metroTextBoxUser = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelUserDb = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxServer = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelServer = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelServerType = new MetroFramework.Controls.MetroLabel();
             this.metroTabPageCreateUserField = new MetroFramework.Controls.MetroTabPage();
             this.metroComboBoxFieldSubType = new MetroFramework.Controls.MetroComboBox();
             this.metroLabelFieldSubType = new MetroFramework.Controls.MetroLabel();
             this.metroComboBoxFieldType = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelType = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxUserFieldDescription = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelFieldDescription = new MetroFramework.Controls.MetroLabel();
             this.metroButtonCreateUserField = new MetroFramework.Controls.MetroButton();
             this.metroTextBoxSize = new MetroFramework.Controls.MetroTextBox();
             this.metroLabelSize = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxUserFieldName = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelFieldName = new MetroFramework.Controls.MetroLabel();
             this.metroGridTables = new MetroFramework.Controls.MetroGrid();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelTableSelection = new MetroFramework.Controls.MetroLabel();
             this.metroButtonRemove = new MetroFramework.Controls.MetroButton();
             this.metroButtonAdd = new MetroFramework.Controls.MetroButton();
             this.metroButtonClose = new MetroFramework.Controls.MetroButton();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.metroComboBoxLanguage = new MetroFramework.Controls.MetroComboBox();
             this.metroTabControl1.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
+            this.metroTabPageConnection.SuspendLayout();
             this.metroTabPageCreateUserField.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridTables)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +83,7 @@
             this.metroTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPageConnection);
             this.metroTabControl1.Controls.Add(this.metroTabPageCreateUserField);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -91,35 +92,35 @@
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
             // 
-            // metroTabPage1
+            // metroTabPageConnection
             // 
-            this.metroTabPage1.Controls.Add(this.metroLinkWaiting);
-            this.metroTabPage1.Controls.Add(this.metroTextBoxSAPPassword);
-            this.metroTabPage1.Controls.Add(this.metroLabel7);
-            this.metroTabPage1.Controls.Add(this.metroTextBoxSAPUser);
-            this.metroTabPage1.Controls.Add(this.metroLabel6);
-            this.metroTabPage1.Controls.Add(this.metroButtonConnect);
-            this.metroTabPage1.Controls.Add(this.metroTextBoxCompanyDb);
-            this.metroTabPage1.Controls.Add(this.metroLabel5);
-            this.metroTabPage1.Controls.Add(this.metroTextBoxPassword);
-            this.metroTabPage1.Controls.Add(this.metroLabel4);
-            this.metroTabPage1.Controls.Add(this.metroComboBoxServerType);
-            this.metroTabPage1.Controls.Add(this.metroTextBoxUser);
-            this.metroTabPage1.Controls.Add(this.metroLabel3);
-            this.metroTabPage1.Controls.Add(this.metroTextBoxServer);
-            this.metroTabPage1.Controls.Add(this.metroLabel2);
-            this.metroTabPage1.Controls.Add(this.metroLabel1);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(746, 303);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Conexão SAP";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.metroTabPageConnection.Controls.Add(this.metroLinkWaiting);
+            this.metroTabPageConnection.Controls.Add(this.metroTextBoxSAPPassword);
+            this.metroTabPageConnection.Controls.Add(this.metroLabelSAPPassword);
+            this.metroTabPageConnection.Controls.Add(this.metroTextBoxSAPUser);
+            this.metroTabPageConnection.Controls.Add(this.metroLabelUserSAP);
+            this.metroTabPageConnection.Controls.Add(this.metroButtonConnect);
+            this.metroTabPageConnection.Controls.Add(this.metroTextBoxCompanyDb);
+            this.metroTabPageConnection.Controls.Add(this.metroLabelDatabase);
+            this.metroTabPageConnection.Controls.Add(this.metroTextBoxPassword);
+            this.metroTabPageConnection.Controls.Add(this.metroLabeUserDbPassword);
+            this.metroTabPageConnection.Controls.Add(this.metroComboBoxServerType);
+            this.metroTabPageConnection.Controls.Add(this.metroTextBoxUser);
+            this.metroTabPageConnection.Controls.Add(this.metroLabelUserDb);
+            this.metroTabPageConnection.Controls.Add(this.metroTextBoxServer);
+            this.metroTabPageConnection.Controls.Add(this.metroLabelServer);
+            this.metroTabPageConnection.Controls.Add(this.metroLabelServerType);
+            this.metroTabPageConnection.HorizontalScrollbarBarColor = true;
+            this.metroTabPageConnection.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageConnection.HorizontalScrollbarSize = 10;
+            this.metroTabPageConnection.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPageConnection.Name = "metroTabPageConnection";
+            this.metroTabPageConnection.Size = new System.Drawing.Size(746, 303);
+            this.metroTabPageConnection.TabIndex = 0;
+            this.metroTabPageConnection.Text = "Conexão SAP";
+            this.metroTabPageConnection.VerticalScrollbarBarColor = true;
+            this.metroTabPageConnection.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageConnection.VerticalScrollbarSize = 10;
             // 
             // metroLinkWaiting
             // 
@@ -165,14 +166,14 @@
             this.metroTextBoxSAPPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxSAPPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel7
+            // metroLabelSAPPassword
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(3, 194);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel7.TabIndex = 12;
-            this.metroLabel7.Text = "Senha SAP";
+            this.metroLabelSAPPassword.AutoSize = true;
+            this.metroLabelSAPPassword.Location = new System.Drawing.Point(3, 194);
+            this.metroLabelSAPPassword.Name = "metroLabelSAPPassword";
+            this.metroLabelSAPPassword.Size = new System.Drawing.Size(72, 19);
+            this.metroLabelSAPPassword.TabIndex = 12;
+            this.metroLabelSAPPassword.Text = "Senha SAP";
             // 
             // metroTextBoxSAPUser
             // 
@@ -206,14 +207,14 @@
             this.metroTextBoxSAPUser.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxSAPUser.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel6
+            // metroLabelUserSAP
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(3, 165);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel6.TabIndex = 10;
-            this.metroLabel6.Text = "Usuário SAP";
+            this.metroLabelUserSAP.AutoSize = true;
+            this.metroLabelUserSAP.Location = new System.Drawing.Point(3, 165);
+            this.metroLabelUserSAP.Name = "metroLabelUserSAP";
+            this.metroLabelUserSAP.Size = new System.Drawing.Size(81, 19);
+            this.metroLabelUserSAP.TabIndex = 10;
+            this.metroLabelUserSAP.Text = "Usuário SAP";
             // 
             // metroButtonConnect
             // 
@@ -258,14 +259,14 @@
             this.metroTextBoxCompanyDb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxCompanyDb.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel5
+            // metroLabelDatabase
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(3, 136);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(104, 19);
-            this.metroLabel5.TabIndex = 8;
-            this.metroLabel5.Text = "Banco de dados";
+            this.metroLabelDatabase.AutoSize = true;
+            this.metroLabelDatabase.Location = new System.Drawing.Point(3, 136);
+            this.metroLabelDatabase.Name = "metroLabelDatabase";
+            this.metroLabelDatabase.Size = new System.Drawing.Size(104, 19);
+            this.metroLabelDatabase.TabIndex = 8;
+            this.metroLabelDatabase.Text = "Banco de dados";
             // 
             // metroTextBoxPassword
             // 
@@ -299,14 +300,14 @@
             this.metroTextBoxPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel4
+            // metroLabeUserDbPassword
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 107);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel4.TabIndex = 6;
-            this.metroLabel4.Text = "Senha Db";
+            this.metroLabeUserDbPassword.AutoSize = true;
+            this.metroLabeUserDbPassword.Location = new System.Drawing.Point(3, 107);
+            this.metroLabeUserDbPassword.Name = "metroLabeUserDbPassword";
+            this.metroLabeUserDbPassword.Size = new System.Drawing.Size(65, 19);
+            this.metroLabeUserDbPassword.TabIndex = 6;
+            this.metroLabeUserDbPassword.Text = "Senha Db";
             // 
             // metroComboBoxServerType
             // 
@@ -350,14 +351,14 @@
             this.metroTextBoxUser.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxUser.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel3
+            // metroLabelUserDb
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 78);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(74, 19);
-            this.metroLabel3.TabIndex = 4;
-            this.metroLabel3.Text = "Usuário Db";
+            this.metroLabelUserDb.AutoSize = true;
+            this.metroLabelUserDb.Location = new System.Drawing.Point(3, 78);
+            this.metroLabelUserDb.Name = "metroLabelUserDb";
+            this.metroLabelUserDb.Size = new System.Drawing.Size(74, 19);
+            this.metroLabelUserDb.TabIndex = 4;
+            this.metroLabelUserDb.Text = "Usuário Db";
             // 
             // metroTextBoxServer
             // 
@@ -391,39 +392,39 @@
             this.metroTextBoxServer.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxServer.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel2
+            // metroLabelServer
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 49);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(59, 19);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Servidor";
+            this.metroLabelServer.AutoSize = true;
+            this.metroLabelServer.Location = new System.Drawing.Point(3, 49);
+            this.metroLabelServer.Name = "metroLabelServer";
+            this.metroLabelServer.Size = new System.Drawing.Size(59, 19);
+            this.metroLabelServer.TabIndex = 2;
+            this.metroLabelServer.Text = "Servidor";
             // 
-            // metroLabel1
+            // metroLabelServerType
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 20);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(106, 19);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Tipo de servidor";
+            this.metroLabelServerType.AutoSize = true;
+            this.metroLabelServerType.Location = new System.Drawing.Point(3, 20);
+            this.metroLabelServerType.Name = "metroLabelServerType";
+            this.metroLabelServerType.Size = new System.Drawing.Size(106, 19);
+            this.metroLabelServerType.TabIndex = 0;
+            this.metroLabelServerType.Text = "Tipo de servidor";
             // 
             // metroTabPageCreateUserField
             // 
             this.metroTabPageCreateUserField.Controls.Add(this.metroComboBoxFieldSubType);
             this.metroTabPageCreateUserField.Controls.Add(this.metroLabelFieldSubType);
             this.metroTabPageCreateUserField.Controls.Add(this.metroComboBoxFieldType);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabel12);
+            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelType);
             this.metroTabPageCreateUserField.Controls.Add(this.metroTextBoxUserFieldDescription);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabel11);
+            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelFieldDescription);
             this.metroTabPageCreateUserField.Controls.Add(this.metroButtonCreateUserField);
             this.metroTabPageCreateUserField.Controls.Add(this.metroTextBoxSize);
             this.metroTabPageCreateUserField.Controls.Add(this.metroLabelSize);
             this.metroTabPageCreateUserField.Controls.Add(this.metroTextBoxUserFieldName);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabel9);
+            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelFieldName);
             this.metroTabPageCreateUserField.Controls.Add(this.metroGridTables);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabel8);
+            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelTableSelection);
             this.metroTabPageCreateUserField.Controls.Add(this.metroButtonRemove);
             this.metroTabPageCreateUserField.Controls.Add(this.metroButtonAdd);
             this.metroTabPageCreateUserField.HorizontalScrollbarBarColor = true;
@@ -472,15 +473,15 @@
             this.metroToolTip1.SetToolTip(this.metroComboBoxFieldType, "Tipo de dado (Texto: Alpha, Número: Inteiro, Totais: Valores decimais)");
             this.metroComboBoxFieldType.UseSelectable = true;
             // 
-            // metroLabel12
+            // metroLabelType
             // 
-            this.metroLabel12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(329, 108);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(35, 19);
-            this.metroLabel12.TabIndex = 12;
-            this.metroLabel12.Text = "Tipo";
+            this.metroLabelType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabelType.AutoSize = true;
+            this.metroLabelType.Location = new System.Drawing.Point(329, 108);
+            this.metroLabelType.Name = "metroLabelType";
+            this.metroLabelType.Size = new System.Drawing.Size(35, 19);
+            this.metroLabelType.TabIndex = 12;
+            this.metroLabelType.Text = "Tipo";
             // 
             // metroTextBoxUserFieldDescription
             // 
@@ -515,15 +516,15 @@
             this.metroTextBoxUserFieldDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxUserFieldDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel11
+            // metroLabelFieldDescription
             // 
-            this.metroLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(329, 73);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(130, 19);
-            this.metroLabel11.TabIndex = 1;
-            this.metroLabel11.Text = "Descrição do campo";
+            this.metroLabelFieldDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabelFieldDescription.AutoSize = true;
+            this.metroLabelFieldDescription.Location = new System.Drawing.Point(329, 73);
+            this.metroLabelFieldDescription.Name = "metroLabelFieldDescription";
+            this.metroLabelFieldDescription.Size = new System.Drawing.Size(130, 19);
+            this.metroLabelFieldDescription.TabIndex = 1;
+            this.metroLabelFieldDescription.Text = "Descrição do campo";
             // 
             // metroButtonCreateUserField
             // 
@@ -614,15 +615,15 @@
             this.metroTextBoxUserFieldName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBoxUserFieldName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel9
+            // metroLabelFieldName
             // 
-            this.metroLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(329, 44);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(134, 19);
-            this.metroLabel9.TabIndex = 4;
-            this.metroLabel9.Text = "Nome para o campo";
+            this.metroLabelFieldName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabelFieldName.AutoSize = true;
+            this.metroLabelFieldName.Location = new System.Drawing.Point(329, 44);
+            this.metroLabelFieldName.Name = "metroLabelFieldName";
+            this.metroLabelFieldName.Size = new System.Drawing.Size(134, 19);
+            this.metroLabelFieldName.TabIndex = 4;
+            this.metroLabelFieldName.Text = "Nome para o campo";
             // 
             // metroGridTables
             // 
@@ -691,14 +692,14 @@
             this.ColumnDescrip.Name = "ColumnDescrip";
             this.ColumnDescrip.ReadOnly = true;
             // 
-            // metroLabel8
+            // metroLabelTableSelection
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(3, 10);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(134, 19);
-            this.metroLabel8.TabIndex = 2;
-            this.metroLabel8.Text = "Selecione uma tabela";
+            this.metroLabelTableSelection.AutoSize = true;
+            this.metroLabelTableSelection.Location = new System.Drawing.Point(3, 10);
+            this.metroLabelTableSelection.Name = "metroLabelTableSelection";
+            this.metroLabelTableSelection.Size = new System.Drawing.Size(134, 19);
+            this.metroLabelTableSelection.TabIndex = 2;
+            this.metroLabelTableSelection.Text = "Selecione uma tabela";
             // 
             // metroButtonRemove
             // 
@@ -738,7 +739,7 @@
             // metroLink1
             // 
             this.metroLink1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLink1.Location = new System.Drawing.Point(506, 414);
+            this.metroLink1.Location = new System.Drawing.Point(510, 414);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(267, 23);
             this.metroLink1.TabIndex = 3;
@@ -754,11 +755,25 @@
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // metroComboBoxLanguage
+            // 
+            this.metroComboBoxLanguage.FormattingEnabled = true;
+            this.metroComboBoxLanguage.ItemHeight = 23;
+            this.metroComboBoxLanguage.Items.AddRange(new object[] {
+            "English",
+            "Português"});
+            this.metroComboBoxLanguage.Location = new System.Drawing.Point(656, 28);
+            this.metroComboBoxLanguage.Name = "metroComboBoxLanguage";
+            this.metroComboBoxLanguage.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBoxLanguage.TabIndex = 4;
+            this.metroComboBoxLanguage.UseSelectable = true;
+            // 
             // FormCreateUserFields
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroComboBoxLanguage);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.metroButtonClose);
             this.Controls.Add(this.metroTabControl1);
@@ -766,8 +781,8 @@
             this.Name = "FormCreateUserFields";
             this.Text = "Criar campos de usuários SAP";
             this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage1.PerformLayout();
+            this.metroTabPageConnection.ResumeLayout(false);
+            this.metroTabPageConnection.PerformLayout();
             this.metroTabPageCreateUserField.ResumeLayout(false);
             this.metroTabPageCreateUserField.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridTables)).EndInit();
@@ -778,44 +793,45 @@
         #endregion
 
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage metroTabPageConnection;
         private MetroFramework.Controls.MetroTabPage metroTabPageCreateUserField;
         private MetroFramework.Controls.MetroButton metroButtonClose;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabelServerType;
         private MetroFramework.Controls.MetroTextBox metroTextBoxServer;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabelServer;
         private MetroFramework.Controls.MetroTextBox metroTextBoxUser;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabelUserDb;
         private MetroFramework.Controls.MetroComboBox metroComboBoxServerType;
         private MetroFramework.Controls.MetroTextBox metroTextBoxPassword;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabeUserDbPassword;
         private MetroFramework.Controls.MetroTextBox metroTextBoxCompanyDb;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabelDatabase;
         private MetroFramework.Controls.MetroButton metroButtonConnect;
         private MetroFramework.Controls.MetroTextBox metroTextBoxSAPPassword;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel metroLabelSAPPassword;
         private MetroFramework.Controls.MetroTextBox metroTextBoxSAPUser;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabelUserSAP;
         private MetroFramework.Controls.MetroGrid metroGridTables;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescrip;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel metroLabelTableSelection;
         private MetroFramework.Controls.MetroTextBox metroTextBoxUserFieldName;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabelFieldName;
         private MetroFramework.Controls.MetroTextBox metroTextBoxSize;
         private MetroFramework.Controls.MetroLabel metroLabelSize;
         private MetroFramework.Controls.MetroButton metroButtonCreateUserField;
         private MetroFramework.Controls.MetroTextBox metroTextBoxUserFieldDescription;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel metroLabelFieldDescription;
         private MetroFramework.Controls.MetroButton metroButtonAdd;
         private MetroFramework.Controls.MetroButton metroButtonRemove;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroComboBox metroComboBoxFieldType;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel metroLabelType;
         private MetroFramework.Controls.MetroComboBox metroComboBoxFieldSubType;
         private MetroFramework.Controls.MetroLabel metroLabelFieldSubType;
         private MetroFramework.Controls.MetroLink metroLinkWaiting;
+        private MetroFramework.Controls.MetroComboBox metroComboBoxLanguage;
     }
 }
 
