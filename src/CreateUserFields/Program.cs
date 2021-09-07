@@ -28,7 +28,7 @@ namespace CreateUserFields
             }
             catch (COMException ex)
             {
-                MessageBox.Show($"DI API não instalada erro: {ex.Message}");
+                MessageBox.Show($"DI API não instalada ou não é a arquitura esperada (x86 ou x64): {ex.Message}");
                 throw ex;
             }
             catch (Exception ex)
