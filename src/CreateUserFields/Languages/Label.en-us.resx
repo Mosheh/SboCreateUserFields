@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -141,8 +144,14 @@
   <data name="DescriptionField" xml:space="preserve">
     <value>Description field</value>
   </data>
+  <data name="ExistingField" xml:space="preserve">
+    <value>Existing field</value>
+  </data>
   <data name="FieldName" xml:space="preserve">
     <value>Field name</value>
+  </data>
+  <data name="Fields" xml:space="preserve">
+    <value>Campos</value>
   </data>
   <data name="Length" xml:space="preserve">
     <value>Length</value>
@@ -150,11 +159,17 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="NewField" xml:space="preserve">
+    <value>New field</value>
+  </data>
   <data name="NewTable" xml:space="preserve">
     <value>New table</value>
   </data>
   <data name="ObjectsSelection" xml:space="preserve">
     <value>Objects selection</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
   </data>
   <data name="SAPConnection" xml:space="preserve">
     <value>SAP Connection</value>
@@ -164,6 +179,9 @@
   </data>
   <data name="SAPUser" xml:space="preserve">
     <value>SAP User</value>
+  </data>
+  <data name="SelectRequiredMessage" xml:space="preserve">
+    <value>Please select a item</value>
   </data>
   <data name="SelectTable" xml:space="preserve">
     <value>Select a table</value>

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -72,10 +75,21 @@
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.metroComboBoxLanguage = new MetroFramework.Controls.MetroComboBox();
+            this.metroTabControlFields = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPageNewField = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPageFields = new MetroFramework.Controls.MetroTabPage();
+            this.metroGridFields = new MetroFramework.Controls.MetroGrid();
+            this.metroButtonRemoveField = new MetroFramework.Controls.MetroButton();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPageConnection.SuspendLayout();
             this.metroTabPageCreateUserField.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridTables)).BeginInit();
+            this.metroTabControlFields.SuspendLayout();
+            this.metroTabPageNewField.SuspendLayout();
+            this.metroTabPageFields.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGridFields)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -412,17 +426,7 @@
             // 
             // metroTabPageCreateUserField
             // 
-            this.metroTabPageCreateUserField.Controls.Add(this.metroComboBoxFieldSubType);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelFieldSubType);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroComboBoxFieldType);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelType);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroTextBoxUserFieldDescription);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelFieldDescription);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroButtonCreateUserField);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroTextBoxSize);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelSize);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroTextBoxUserFieldName);
-            this.metroTabPageCreateUserField.Controls.Add(this.metroLabelFieldName);
+            this.metroTabPageCreateUserField.Controls.Add(this.metroTabControlFields);
             this.metroTabPageCreateUserField.Controls.Add(this.metroGridTables);
             this.metroTabPageCreateUserField.Controls.Add(this.metroLabelTableSelection);
             this.metroTabPageCreateUserField.Controls.Add(this.metroButtonRemove);
@@ -444,9 +448,9 @@
             this.metroComboBoxFieldSubType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroComboBoxFieldSubType.FormattingEnabled = true;
             this.metroComboBoxFieldSubType.ItemHeight = 23;
-            this.metroComboBoxFieldSubType.Location = new System.Drawing.Point(486, 137);
+            this.metroComboBoxFieldSubType.Location = new System.Drawing.Point(160, 108);
             this.metroComboBoxFieldSubType.Name = "metroComboBoxFieldSubType";
-            this.metroComboBoxFieldSubType.Size = new System.Drawing.Size(257, 29);
+            this.metroComboBoxFieldSubType.Size = new System.Drawing.Size(237, 29);
             this.metroComboBoxFieldSubType.TabIndex = 4;
             this.metroToolTip1.SetToolTip(this.metroComboBoxFieldSubType, "Tipo de dado (Texto: Alpha, Número: Inteiro, Totais: Valores decimais)");
             this.metroComboBoxFieldSubType.UseSelectable = true;
@@ -455,7 +459,7 @@
             // 
             this.metroLabelFieldSubType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabelFieldSubType.AutoSize = true;
-            this.metroLabelFieldSubType.Location = new System.Drawing.Point(329, 142);
+            this.metroLabelFieldSubType.Location = new System.Drawing.Point(3, 108);
             this.metroLabelFieldSubType.Name = "metroLabelFieldSubType";
             this.metroLabelFieldSubType.Size = new System.Drawing.Size(58, 19);
             this.metroLabelFieldSubType.TabIndex = 14;
@@ -466,9 +470,9 @@
             this.metroComboBoxFieldType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroComboBoxFieldType.FormattingEnabled = true;
             this.metroComboBoxFieldType.ItemHeight = 23;
-            this.metroComboBoxFieldType.Location = new System.Drawing.Point(486, 102);
+            this.metroComboBoxFieldType.Location = new System.Drawing.Point(160, 73);
             this.metroComboBoxFieldType.Name = "metroComboBoxFieldType";
-            this.metroComboBoxFieldType.Size = new System.Drawing.Size(257, 29);
+            this.metroComboBoxFieldType.Size = new System.Drawing.Size(237, 29);
             this.metroComboBoxFieldType.TabIndex = 2;
             this.metroToolTip1.SetToolTip(this.metroComboBoxFieldType, "Tipo de dado (Texto: Alpha, Número: Inteiro, Totais: Valores decimais)");
             this.metroComboBoxFieldType.UseSelectable = true;
@@ -477,7 +481,7 @@
             // 
             this.metroLabelType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabelType.AutoSize = true;
-            this.metroLabelType.Location = new System.Drawing.Point(329, 108);
+            this.metroLabelType.Location = new System.Drawing.Point(3, 73);
             this.metroLabelType.Name = "metroLabelType";
             this.metroLabelType.Size = new System.Drawing.Size(35, 19);
             this.metroLabelType.TabIndex = 12;
@@ -490,7 +494,7 @@
             // 
             // 
             this.metroTextBoxUserFieldDescription.CustomButton.Image = null;
-            this.metroTextBoxUserFieldDescription.CustomButton.Location = new System.Drawing.Point(235, 1);
+            this.metroTextBoxUserFieldDescription.CustomButton.Location = new System.Drawing.Point(215, 1);
             this.metroTextBoxUserFieldDescription.CustomButton.Name = "";
             this.metroTextBoxUserFieldDescription.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBoxUserFieldDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -499,7 +503,7 @@
             this.metroTextBoxUserFieldDescription.CustomButton.UseSelectable = true;
             this.metroTextBoxUserFieldDescription.CustomButton.Visible = false;
             this.metroTextBoxUserFieldDescription.Lines = new string[0];
-            this.metroTextBoxUserFieldDescription.Location = new System.Drawing.Point(486, 73);
+            this.metroTextBoxUserFieldDescription.Location = new System.Drawing.Point(160, 44);
             this.metroTextBoxUserFieldDescription.MaxLength = 20;
             this.metroTextBoxUserFieldDescription.Name = "metroTextBoxUserFieldDescription";
             this.metroTextBoxUserFieldDescription.PasswordChar = '\0';
@@ -509,7 +513,7 @@
             this.metroTextBoxUserFieldDescription.SelectionLength = 0;
             this.metroTextBoxUserFieldDescription.SelectionStart = 0;
             this.metroTextBoxUserFieldDescription.ShortcutsEnabled = true;
-            this.metroTextBoxUserFieldDescription.Size = new System.Drawing.Size(257, 23);
+            this.metroTextBoxUserFieldDescription.Size = new System.Drawing.Size(237, 23);
             this.metroTextBoxUserFieldDescription.TabIndex = 1;
             this.metroTextBoxUserFieldDescription.UseSelectable = true;
             this.metroTextBoxUserFieldDescription.WaterMark = "Descrição para o campo de usuário (Tela)";
@@ -520,7 +524,7 @@
             // 
             this.metroLabelFieldDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabelFieldDescription.AutoSize = true;
-            this.metroLabelFieldDescription.Location = new System.Drawing.Point(329, 73);
+            this.metroLabelFieldDescription.Location = new System.Drawing.Point(3, 44);
             this.metroLabelFieldDescription.Name = "metroLabelFieldDescription";
             this.metroLabelFieldDescription.Size = new System.Drawing.Size(130, 19);
             this.metroLabelFieldDescription.TabIndex = 1;
@@ -529,7 +533,7 @@
             // metroButtonCreateUserField
             // 
             this.metroButtonCreateUserField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButtonCreateUserField.Location = new System.Drawing.Point(668, 208);
+            this.metroButtonCreateUserField.Location = new System.Drawing.Point(322, 143);
             this.metroButtonCreateUserField.Name = "metroButtonCreateUserField";
             this.metroButtonCreateUserField.Size = new System.Drawing.Size(75, 23);
             this.metroButtonCreateUserField.TabIndex = 5;
@@ -544,7 +548,7 @@
             // 
             // 
             this.metroTextBoxSize.CustomButton.Image = null;
-            this.metroTextBoxSize.CustomButton.Location = new System.Drawing.Point(235, 1);
+            this.metroTextBoxSize.CustomButton.Location = new System.Drawing.Point(215, 1);
             this.metroTextBoxSize.CustomButton.Name = "";
             this.metroTextBoxSize.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBoxSize.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -553,7 +557,7 @@
             this.metroTextBoxSize.CustomButton.UseSelectable = true;
             this.metroTextBoxSize.CustomButton.Visible = false;
             this.metroTextBoxSize.Lines = new string[0];
-            this.metroTextBoxSize.Location = new System.Drawing.Point(486, 137);
+            this.metroTextBoxSize.Location = new System.Drawing.Point(160, 108);
             this.metroTextBoxSize.MaxLength = 3;
             this.metroTextBoxSize.Name = "metroTextBoxSize";
             this.metroTextBoxSize.PasswordChar = '\0';
@@ -563,7 +567,7 @@
             this.metroTextBoxSize.SelectionLength = 0;
             this.metroTextBoxSize.SelectionStart = 0;
             this.metroTextBoxSize.ShortcutsEnabled = true;
-            this.metroTextBoxSize.Size = new System.Drawing.Size(257, 23);
+            this.metroTextBoxSize.Size = new System.Drawing.Size(237, 23);
             this.metroTextBoxSize.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.metroTextBoxSize, "Número máximo de caracteres");
             this.metroTextBoxSize.UseSelectable = true;
@@ -576,7 +580,7 @@
             // 
             this.metroLabelSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabelSize.AutoSize = true;
-            this.metroLabelSize.Location = new System.Drawing.Point(329, 137);
+            this.metroLabelSize.Location = new System.Drawing.Point(3, 108);
             this.metroLabelSize.Name = "metroLabelSize";
             this.metroLabelSize.Size = new System.Drawing.Size(127, 19);
             this.metroLabelSize.TabIndex = 6;
@@ -589,7 +593,7 @@
             // 
             // 
             this.metroTextBoxUserFieldName.CustomButton.Image = null;
-            this.metroTextBoxUserFieldName.CustomButton.Location = new System.Drawing.Point(235, 1);
+            this.metroTextBoxUserFieldName.CustomButton.Location = new System.Drawing.Point(215, 1);
             this.metroTextBoxUserFieldName.CustomButton.Name = "";
             this.metroTextBoxUserFieldName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBoxUserFieldName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -598,7 +602,7 @@
             this.metroTextBoxUserFieldName.CustomButton.UseSelectable = true;
             this.metroTextBoxUserFieldName.CustomButton.Visible = false;
             this.metroTextBoxUserFieldName.Lines = new string[0];
-            this.metroTextBoxUserFieldName.Location = new System.Drawing.Point(486, 44);
+            this.metroTextBoxUserFieldName.Location = new System.Drawing.Point(160, 15);
             this.metroTextBoxUserFieldName.MaxLength = 19;
             this.metroTextBoxUserFieldName.Name = "metroTextBoxUserFieldName";
             this.metroTextBoxUserFieldName.PasswordChar = '\0';
@@ -608,7 +612,7 @@
             this.metroTextBoxUserFieldName.SelectionLength = 0;
             this.metroTextBoxUserFieldName.SelectionStart = 0;
             this.metroTextBoxUserFieldName.ShortcutsEnabled = true;
-            this.metroTextBoxUserFieldName.Size = new System.Drawing.Size(257, 23);
+            this.metroTextBoxUserFieldName.Size = new System.Drawing.Size(237, 23);
             this.metroTextBoxUserFieldName.TabIndex = 0;
             this.metroTextBoxUserFieldName.UseSelectable = true;
             this.metroTextBoxUserFieldName.WaterMark = "Nome do campo de usuário";
@@ -619,7 +623,7 @@
             // 
             this.metroLabelFieldName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabelFieldName.AutoSize = true;
-            this.metroLabelFieldName.Location = new System.Drawing.Point(329, 44);
+            this.metroLabelFieldName.Location = new System.Drawing.Point(3, 15);
             this.metroLabelFieldName.Name = "metroLabelFieldName";
             this.metroLabelFieldName.Size = new System.Drawing.Size(134, 19);
             this.metroLabelFieldName.TabIndex = 4;
@@ -636,26 +640,26 @@
             this.metroGridTables.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.metroGridTables.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGridTables.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridTables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridTables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.metroGridTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGridTables.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnName,
             this.ColumnDescrip});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridTables.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridTables.DefaultCellStyle = dataGridViewCellStyle5;
             this.metroGridTables.EnableHeadersVisualStyles = false;
             this.metroGridTables.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridTables.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -664,14 +668,14 @@
             this.metroGridTables.Name = "metroGridTables";
             this.metroGridTables.ReadOnly = true;
             this.metroGridTables.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridTables.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridTables.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.metroGridTables.RowHeadersVisible = false;
             this.metroGridTables.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridTables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -768,6 +772,136 @@
             this.metroComboBoxLanguage.TabIndex = 4;
             this.metroComboBoxLanguage.UseSelectable = true;
             // 
+            // metroTabControlFields
+            // 
+            this.metroTabControlFields.Controls.Add(this.metroTabPageNewField);
+            this.metroTabControlFields.Controls.Add(this.metroTabPageFields);
+            this.metroTabControlFields.Location = new System.Drawing.Point(335, 10);
+            this.metroTabControlFields.Name = "metroTabControlFields";
+            this.metroTabControlFields.SelectedIndex = 0;
+            this.metroTabControlFields.Size = new System.Drawing.Size(408, 290);
+            this.metroTabControlFields.TabIndex = 18;
+            this.metroTabControlFields.UseSelectable = true;
+            // 
+            // metroTabPageNewField
+            // 
+            this.metroTabPageNewField.Controls.Add(this.metroLabelFieldName);
+            this.metroTabPageNewField.Controls.Add(this.metroLabelType);
+            this.metroTabPageNewField.Controls.Add(this.metroComboBoxFieldSubType);
+            this.metroTabPageNewField.Controls.Add(this.metroTextBoxUserFieldName);
+            this.metroTabPageNewField.Controls.Add(this.metroLabelFieldSubType);
+            this.metroTabPageNewField.Controls.Add(this.metroLabelSize);
+            this.metroTabPageNewField.Controls.Add(this.metroComboBoxFieldType);
+            this.metroTabPageNewField.Controls.Add(this.metroTextBoxSize);
+            this.metroTabPageNewField.Controls.Add(this.metroButtonCreateUserField);
+            this.metroTabPageNewField.Controls.Add(this.metroTextBoxUserFieldDescription);
+            this.metroTabPageNewField.Controls.Add(this.metroLabelFieldDescription);
+            this.metroTabPageNewField.HorizontalScrollbarBarColor = true;
+            this.metroTabPageNewField.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageNewField.HorizontalScrollbarSize = 10;
+            this.metroTabPageNewField.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPageNewField.Name = "metroTabPageNewField";
+            this.metroTabPageNewField.Size = new System.Drawing.Size(400, 248);
+            this.metroTabPageNewField.TabIndex = 0;
+            this.metroTabPageNewField.Text = "Novo campo";
+            this.metroTabPageNewField.VerticalScrollbarBarColor = true;
+            this.metroTabPageNewField.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageNewField.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPageFields
+            // 
+            this.metroTabPageFields.Controls.Add(this.metroButtonRemoveField);
+            this.metroTabPageFields.Controls.Add(this.metroGridFields);
+            this.metroTabPageFields.HorizontalScrollbarBarColor = true;
+            this.metroTabPageFields.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPageFields.HorizontalScrollbarSize = 10;
+            this.metroTabPageFields.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPageFields.Name = "metroTabPageFields";
+            this.metroTabPageFields.Size = new System.Drawing.Size(400, 248);
+            this.metroTabPageFields.TabIndex = 1;
+            this.metroTabPageFields.Text = "Campos";
+            this.metroTabPageFields.VerticalScrollbarBarColor = true;
+            this.metroTabPageFields.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPageFields.VerticalScrollbarSize = 10;
+            // 
+            // metroGridFields
+            // 
+            this.metroGridFields.AllowUserToDeleteRows = false;
+            this.metroGridFields.AllowUserToResizeRows = false;
+            this.metroGridFields.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroGridFields.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGridFields.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.metroGridFields.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGridFields.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridFields.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.metroGridFields.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metroGridFields.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridFields.DefaultCellStyle = dataGridViewCellStyle2;
+            this.metroGridFields.EnableHeadersVisualStyles = false;
+            this.metroGridFields.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGridFields.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGridFields.Location = new System.Drawing.Point(3, 3);
+            this.metroGridFields.MultiSelect = false;
+            this.metroGridFields.Name = "metroGridFields";
+            this.metroGridFields.ReadOnly = true;
+            this.metroGridFields.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridFields.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.metroGridFields.RowHeadersVisible = false;
+            this.metroGridFields.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGridFields.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGridFields.Size = new System.Drawing.Size(394, 210);
+            this.metroGridFields.TabIndex = 7;
+            // 
+            // metroButtonRemoveField
+            // 
+            this.metroButtonRemoveField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButtonRemoveField.Location = new System.Drawing.Point(325, 219);
+            this.metroButtonRemoveField.Name = "metroButtonRemoveField";
+            this.metroButtonRemoveField.Size = new System.Drawing.Size(75, 23);
+            this.metroButtonRemoveField.TabIndex = 8;
+            this.metroButtonRemoveField.Text = "Remover";
+            this.metroButtonRemoveField.UseSelectable = true;
+            this.metroButtonRemoveField.Click += new System.EventHandler(this.metroButtonRemoveField_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "AliasID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descr";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // FormCreateUserFields
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -786,6 +920,11 @@
             this.metroTabPageCreateUserField.ResumeLayout(false);
             this.metroTabPageCreateUserField.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridTables)).EndInit();
+            this.metroTabControlFields.ResumeLayout(false);
+            this.metroTabPageNewField.ResumeLayout(false);
+            this.metroTabPageNewField.PerformLayout();
+            this.metroTabPageFields.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGridFields)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -832,6 +971,13 @@
         private MetroFramework.Controls.MetroLabel metroLabelFieldSubType;
         private MetroFramework.Controls.MetroLink metroLinkWaiting;
         private MetroFramework.Controls.MetroComboBox metroComboBoxLanguage;
+        private MetroFramework.Controls.MetroTabControl metroTabControlFields;
+        private MetroFramework.Controls.MetroTabPage metroTabPageNewField;
+        private MetroFramework.Controls.MetroTabPage metroTabPageFields;
+        private MetroFramework.Controls.MetroButton metroButtonRemoveField;
+        private MetroFramework.Controls.MetroGrid metroGridFields;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
 

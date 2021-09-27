@@ -17,6 +17,7 @@ namespace CreateUserFields
         Company _company = new Company();
         ISAPTableRepository _tableRepository;
         IConnectionParamRepository _connectionParamRepository;
+        ISAPFieldRepository _SAPFieldRepository;
         SettingRepository _settingRepository;
         private ConnectionParam _connectinoParam;
         private BoDataServerTypes _selectedServerType;
@@ -27,7 +28,7 @@ namespace CreateUserFields
             InitializeComponent();
             metroGridTables.AutoGenerateColumns = false;
             metroTabControl1.SelectedIndex = 0;
-            
+
             FillServerTypes();
             FormatFiedType();
             FormatFieldSubType();
@@ -37,10 +38,29 @@ namespace CreateUserFields
             _connectionParamRepository = new Infra.ConnectionParamRepository(DataConnection.Instance);
             _settingRepository = new SettingRepository(DataConnection.Instance);
             _connectinoParam = _connectionParamRepository.GetConnectionParam();
+            _SAPFieldRepository = new SAPFieldRepository(_company);
             if (_connectinoParam == null) _connectinoParam = new ConnectionParam();
             metroComboBoxLanguage.SelectedValueChanged += MetroComboBoxLanguage_SelectedValueChanged;
+            metroGridTables.CellMouseClick += MetroGridTables_CellMouseClick;
             SetSetting();
             FillControls();
+        }
+
+        private void MetroGridTables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                if (metroGridTables.CurrentRow == null) return;
+                var sapTables = metroGridTables.CurrentRow.DataBoundItem as SAPTables;
+                if (sapTables == null)
+                    throw new Exception(LanguageService.Label(LabelEnum.SelectRequiredMessage, GetCulture()));
+
+                FillGridFields(sapTables.Name);
+            }
+            catch (Exception ex)
+            {
+                this.ShowError(ex);
+            }
         }
 
         private void SetSetting()
@@ -52,7 +72,7 @@ namespace CreateUserFields
             catch (Exception ex)
             {
 
-                
+
             }
         }
 
@@ -138,7 +158,7 @@ namespace CreateUserFields
             }
             catch (Exception ex)
             {
-                MessageService.ShowError(this,ex);
+                MessageService.ShowError(this, ex);
             }
         }
 
@@ -180,7 +200,7 @@ namespace CreateUserFields
             if (_company.Connect() != 0)
                 throw new Exception(_company.GetLastErrorDescription());
 
-            
+
         }
 
         void SaveConnectionParam()
@@ -262,6 +282,7 @@ namespace CreateUserFields
                 this.ShowSucess("Conexão realizada com sucesso!");
 
                 metroTabControl1.SelectedIndex = 1;
+                metroTabControlFields.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -284,7 +305,7 @@ namespace CreateUserFields
         }
 
         private void metroButtonClose_Click(object sender, EventArgs e)
-        {            
+        {
             this.Close();
         }
 
@@ -313,11 +334,12 @@ namespace CreateUserFields
                 _company.Disconnect();
                 ConnectOnSAP();
 
-                
+
 
                 var sapTables = metroGridTables.CurrentRow.DataBoundItem as SAPTables;
                 if (sapTables == null)
-                    throw new Exception("Selecione uma tabela SAP");
+                    throw new Exception(LanguageService.Label(LabelEnum.SelectRequiredMessage, GetCulture()));
+
                 var type = (BoFieldTypes)Convert.ToInt32(metroComboBoxFieldType.SelectedItem);
                 var subType = (BoFldSubTypes)Convert.ToInt32(metroComboBoxFieldSubType.SelectedItem);
 
@@ -328,7 +350,7 @@ namespace CreateUserFields
                 md.Type = type;
                 md.SubType = subType;
                 if (type == BoFieldTypes.db_Alpha)
-                    md.Size = Convert.ToInt32(metroTextBoxSize.Text.Replace(".", ""));                
+                    md.Size = Convert.ToInt32(metroTextBoxSize.Text.Replace(".", ""));
 
                 if (md.Add() != 0)
                     throw new Exception(_company.GetLastErrorDescription());
@@ -445,6 +467,10 @@ namespace CreateUserFields
             metroLabelFieldSubType.Text = LanguageService.Label(LabelEnum.SubType, culture);
             metroLabelSize.Text = LanguageService.Label(LabelEnum.Length, culture);
             metroButtonCreateUserField.Text = LanguageService.Label(LabelEnum.Create, culture);
+            metroLabelTableSelection.Text = LanguageService.Label(LabelEnum.SelectTable, culture);
+            metroTabPageNewField.Text = LanguageService.Label(LabelEnum.NewField, culture);
+            metroTabPageFields.Text = LanguageService.Label(LabelEnum.ExistingField, culture);
+            metroButtonRemoveField.Text = LanguageService.Label(LabelEnum.Remove, culture);
             this.Refresh();
         }
 
@@ -456,9 +482,40 @@ namespace CreateUserFields
             else
                 return new CultureInfo("pt-BR");
         }
+
+        private void FillGridFields(string tableName)
+        {
+            var fields = _SAPFieldRepository.GetAll(tableName);
+            metroGridFields.DataSource = null;
+            metroGridFields.DataSource = fields;
+        }
+
+        private void metroButtonRemoveField_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var culture = GetCulture();
+                if (metroGridFields.CurrentRow == null)
+                    throw new Exception(LanguageService.Label(LabelEnum.SelectRequiredMessage, culture));
+
+                var ask = LanguageService.Label(LabelEnum.AreYouSure, culture);
+
+                var answer = MetroMessageBox.Show(this, ask, "System", MessageBoxButtons.YesNo);
+                if (answer != DialogResult.Yes) return;
+
+                var selectedField = metroGridFields.CurrentRow.DataBoundItem as FieldMD;
+                _SAPFieldRepository.Remove(selectedField.TableID, selectedField.FieldID);
+                FillGridFields(selectedField.TableID);
+            }
+            catch (Exception ex)
+            {
+                this.ShowError(ex);
+            }
+        }
     }
 
-    public static  class CompanySAPExtentions
+
+    public static class CompanySAPExtentions
     {
         public static void ChangeDatabase(this Company company, string database, string dbpassword, string userpassword)
         {
@@ -470,7 +527,7 @@ namespace CreateUserFields
             var server = company.Server;
             var userDb = company.DbUserName;
             var userName = company.UserName;
-            var type = company.DbServerType;            
+            var type = company.DbServerType;
 
             company.Disconnect();
 
@@ -479,7 +536,7 @@ namespace CreateUserFields
             company.DbPassword = dbpassword;
             company.UserName = userName;
             company.Password = userpassword;
-            
+
             company.DbServerType = type;
             company.CompanyDB = database;
 

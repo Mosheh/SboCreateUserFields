@@ -123,11 +123,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Extentions.cs" />
     <Compile Include="Common\MessageService.cs" />
     <Compile Include="Controls\IForm.cs" />
     <Compile Include="Domain\ConnectionParam.cs" />
     <Compile Include="Domain\IConnectionParamRepository.cs" />
     <Compile Include="Domain\IDataConnection.cs" />
+    <Compile Include="Domain\ISAPFields.cs" />
     <Compile Include="Domain\ISAPTableRepository.cs" />
     <Compile Include="Domain\ISettingRepository.cs" />
     <Compile Include="Domain\SAPTables.cs" />
@@ -146,6 +148,7 @@
     </Compile>
     <Compile Include="Infra\ConnectionParamRepository.cs" />
     <Compile Include="Infra\DataConnection.cs" />
+    <Compile Include="Infra\SAPFields.cs" />
     <Compile Include="Infra\SAPTableRepository.cs" />
     <Compile Include="Infra\SettingRepository.cs" />
     <Compile Include="Languages\LabelEnum.cs" />
@@ -158,7 +161,9 @@
     <EmbeddedResource Include="FormNewTable.resx">
       <DependentUpon>FormNewTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Label.en-us.resx" />
+    <EmbeddedResource Include="Languages\Label.en-us.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\Label.pt-br.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

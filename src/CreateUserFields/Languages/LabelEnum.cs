@@ -32,5 +32,11 @@ namespace CreateUserFields.Languages
             ,NewTable
             ,TableName
             ,Cancel
+            ,NewField
+            , Fields
+            , Remove
+            , ExistingField
+            ,AreYouSure
+            , SelectRequiredMessage
     }
 }
