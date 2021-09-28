@@ -42,7 +42,7 @@ namespace CreateUserFields.Infra
                 fields.Add(field);
                 rs.MoveNext();
             }
-
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(rs);
             return fields;
         }
 

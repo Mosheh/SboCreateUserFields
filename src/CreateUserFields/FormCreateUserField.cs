@@ -355,6 +355,7 @@ namespace CreateUserFields
                 if (md.Add() != 0)
                     throw new Exception(_company.GetLastErrorDescription());
 
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(md);
                 MetroMessageBox.Show(this, "Campo criado com sucesso!");
             }
             catch (Exception ex)
