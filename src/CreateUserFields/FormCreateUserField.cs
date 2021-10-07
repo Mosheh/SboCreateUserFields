@@ -44,6 +44,8 @@ namespace CreateUserFields
             metroGridTables.CellMouseClick += MetroGridTables_CellMouseClick;
             SetSetting();
             FillControls();
+
+            metroToolTip2.SetToolTip(metroLinkContact, "moisesjosemiranda@gmail.com");
         }
 
         private void MetroGridTables_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

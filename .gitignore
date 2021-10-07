@@ -6,3 +6,5 @@ installer/
 .vs
 .vscode
 packages/
+output/
+
