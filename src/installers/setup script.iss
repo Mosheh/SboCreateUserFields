@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "SBO User Fields"
-#define MyAppVersion "2.0.1.1"
+#define MyAppVersion "2.0.1.2"
 #define MyAppExeName "CreateUserFields.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
@@ -33,24 +33,24 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\EntityFramework.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\EntityFramework.SqlServer.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\MetroFramework.Design.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\MetroFramework.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\MetroFramework.Fonts.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\SAPBusinessOneSDK.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\SimpleQuery.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.dll.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.EF6.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.Linq.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\CreateUserFields.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\x64\*.*"; DestDir: "{app}\x64"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\x86\*.*"; DestDir: "{app}\x86"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\Data\*.*"; DestDir: "{app}\Data"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\en-us\*.*"; DestDir: "{app}\en-us"; Flags: ignoreversion
-Source: "E:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\pt-br\*.*"; DestDir: "{app}\pt-br"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\EntityFramework.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\EntityFramework.SqlServer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\MetroFramework.Design.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\MetroFramework.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\MetroFramework.Fonts.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\SAPBusinessOneSDK.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\SimpleQuery.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.dll.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.EF6.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\System.Data.SQLite.Linq.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\CreateUserFields.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\x64\*.*"; DestDir: "{app}\x64"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\x86\*.*"; DestDir: "{app}\x86"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\Data\*.*"; DestDir: "{app}\Data"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\en-us\*.*"; DestDir: "{app}\en-us"; Flags: ignoreversion
+Source: "G:\projects\SboCreateUserFields\src\CreateUserFields\bin\x64\Release\pt-br\*.*"; DestDir: "{app}\pt-br"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]

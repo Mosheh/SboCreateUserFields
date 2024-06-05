@@ -153,6 +153,9 @@
   <data name="Fields" xml:space="preserve">
     <value>Campos</value>
   </data>
+  <data name="ImportationUsers" xml:space="preserve">
+    <value>Users importation</value>
+  </data>
   <data name="Length" xml:space="preserve">
     <value>Length</value>
   </data>
@@ -199,7 +202,7 @@
     <value>Table name</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Create user field</value>
+    <value>Create user field - SAP Business One</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>

@@ -13,12 +13,12 @@ namespace CreateUserFields.Common
     {
         public static void ShowSucess(this MetroForm form, string msg)
         {
-            MetroMessageBox.Show(form, msg, "Invent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(form, msg, "Imagine", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static void ShowError(this MetroForm form,  string msg)
         {
-            MetroMessageBox.Show(form, msg, "Invent", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MetroMessageBox.Show(form, msg, "Imagine", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void ShowError(this MetroForm form, Exception ex)
@@ -28,7 +28,7 @@ namespace CreateUserFields.Common
 
         public static void ShowInf(this MetroForm form,string msg)
         {
-            MetroMessageBox.Show(form, msg, "Invent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(form, msg, "Imagine", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
